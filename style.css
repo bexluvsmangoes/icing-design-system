@@ -1,23 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap');
+
+
+/* ==========================================================================
+Colors
+========================================================================== */
+
+:root {
+	--color-smoothie: #C96E86;
+	--color-light-smoothie: #fe9eb6;
+	--color-dark-smoothie: #964059;
+	--color-mint: #C7D7C0;
+	--color-light-mint: #fafff3;
+	--color-dark-mint: #96a690;
+	--color-coffee: #685341;
+	--color-light-coffee: #977f6c;
+	--color-dark-coffee: #3c2a1a;
+	--color-smoke: #909090;
+	--color-extra-dark-smoke: #636363;
+	--color-dark-smoke: #494848;
+}
+
 /* ==========================================================================
 Typography
 ========================================================================== */
 
+:root {
+	--font-primary: Roboto, Arial, sans-serif;
+	--font-secondary: Raleway, Arial, sans-serif;
+
+}
+
 html {
-	color: #C0CCDA;
+	color: var(--color-extra-dark-smoke);
+	font-family: var(--font-primary);
+	line-height: 2;
+
+	--size-ratio: 1.21;
+	--size-six-up: calc( var(--size-five-up) * var(--size-ratio) );
+	--size-five-up: calc( var(--size-four-up) * var(--size-ratio) );
+	--size-four-up: calc( var(--size-three-up) * var(--size-ratio) );
+	--size-three-up: calc( var(--size-two-up) * var(--size-ratio) );
+	--size-two-up: calc( var(--size-one-up) * var(--size-ratio) );
+	--size-one-up: calc( 1rem * var(--size-ratio) );
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-secondary);
+}
+
+h1 {
+	font-size: var(--size-six-up);
+	line-height: 1;
+	color: var(--color-dark-coffee);
+}
+
+h2 {
+	font-size: var(--size-five-up);
+	line-height: 1;
+	color: var(--color-dark-coffee);
+}
+
+h3 {
+	font-size: var(--size-four-up);
+	line-height: 1;
+	color: var(--color-dark-coffee);
+}
+
+h4 {
+	font-size: var(--size-three-up);
+	line-height: 1;
+	color: var(--color-dark-coffee);
+}
+
+h5 {
+	font-size: var(--size-two-up);
+	line-height: 1;
+	color: var(--color-dark-coffee);
+}
+
+
+h6 {
+	font-size: var(--size-one-up);
+	line-height: 1;
+	color: var(--color-dark-coffee);
+}
+
+#ralewayfont {
+	font-family: var(--font-secondary);
+}
+
+#robotofont {
+	font-family: var(--font-primary);
 }
 
 a {
-	color: #C96E86;
+	color: var(--color-dark-smoothie);
+	text-decoration: none;
 }
-/** Sub-section comment block **/
 
+a: hover {
+	color: var(--color-dark-coffee);
+	text-decoration: underline;
+}
+/* ==========================================================================
+Body
+========================================================================== */
+
+body {
+	background-color: var(--color-light-mint);
+	text-decoration: none;
+	color:var(--color-smoke);
+}
+
+main {
+	max-width: 40rem;
+	margin: 0;
+	padding: 2rem;
+}
+
+figure {
+	margin: auto;
+	border: dashed 10px var(--color-dark-mint);
+	border-radius: 20px;
+}
+
+.display_color_palette figure {
+	text-align: center;
+	padding-top: 2rem;
+}
+
+.display_text_color figure {
+	text-align: center;
+	padding-top: 2rem;
+}
+
+.display_typography figure {
+	text-align: left;
+	padding: 1rem;
+}
+
+.display_body_text div {
+	font-style: bold;
+	margin: 1rem;
+}
+
+.display_body_text figure {
+	padding: 1rem;
+}
 /* ==========================================================================
 Header
 ========================================================================== */
 
 header {
-	background-color: #C7D7C0;
+	background-color: var(--color-light-smoothie);
 	padding: 2rem;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	font-family: var(--font-secondary);
+	font-size: 2rem;
+	text-decoration: underline;
 }
 
 /* ==========================================================================
@@ -25,6 +174,7 @@ footer
 ========================================================================== */
 
 footer {
-	background-color: #977f6c;
+	background-color: var(--color-mint);
 	padding: 2rem;
+	margin: 0;
 }
