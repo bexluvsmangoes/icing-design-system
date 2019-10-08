@@ -46,59 +46,41 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-secondary);
+	line-height: 1;
+	color: var(--color-dark-coffee);
 }
 
 h1 {
 	font-size: var(--size-six-up);
-	line-height: 1;
-	color: var(--color-dark-coffee);
 }
 
 h2 {
 	font-size: var(--size-five-up);
-	line-height: 1;
-	color: var(--color-dark-coffee);
 }
 
 h3 {
 	font-size: var(--size-four-up);
-	line-height: 1;
-	color: var(--color-dark-coffee);
 }
 
 h4 {
 	font-size: var(--size-three-up);
-	line-height: 1;
-	color: var(--color-dark-coffee);
 }
 
 h5 {
 	font-size: var(--size-two-up);
-	line-height: 1;
-	color: var(--color-dark-coffee);
 }
-
 
 h6 {
 	font-size: var(--size-one-up);
-	line-height: 1;
-	color: var(--color-dark-coffee);
 }
 
-#ralewayfont {
-	font-family: var(--font-secondary);
-}
-
-#robotofont {
-	font-family: var(--font-primary);
-}
 
 a {
 	color: var(--color-dark-smoothie);
 	text-decoration: none;
 }
 
-a: hover {
+a:hover {
 	color: var(--color-dark-coffee);
 	text-decoration: underline;
 }
@@ -108,45 +90,15 @@ Body
 
 body {
 	background-color: var(--color-light-mint);
-	text-decoration: none;
 	color:var(--color-smoke);
+	margin: 0;
 }
 
 main {
 	max-width: 40rem;
-	margin: 0;
 	padding: 2rem;
 }
 
-figure {
-	margin: auto;
-	border: dashed 10px var(--color-dark-mint);
-	border-radius: 20px;
-}
-
-.display_color_palette figure {
-	text-align: center;
-	padding-top: 2rem;
-}
-
-.display_text_color figure {
-	text-align: center;
-	padding-top: 2rem;
-}
-
-.display_typography figure {
-	text-align: left;
-	padding: 1rem;
-}
-
-.display_body_text div {
-	font-style: bold;
-	margin: 1rem;
-}
-
-.display_body_text figure {
-	padding: 1rem;
-}
 /* ==========================================================================
 Header
 ========================================================================== */
@@ -154,10 +106,9 @@ Header
 header {
 	background-color: var(--color-light-smoothie);
 	padding: 2rem;
-	margin: 0;
 }
 
-ul {
+header ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -177,4 +128,182 @@ footer {
 	background-color: var(--color-mint);
 	padding: 2rem;
 	margin: 0;
+}
+
+/* ==========================================================================
+buttons
+========================================================================== */
+
+.link-button-hero-smoothie {
+	border-radius: .5rem;
+	background-color: var(--color-light-smoothie);
+	border-radius: 0.5rem;
+	display: inline-block;
+	padding: 0 2rem;
+}
+
+.link-button-hero-smoothie:hover {
+	background-color: var(--color-smoothie);
+	color: white;
+	text-decoration: none;
+}
+
+.link-button-hero-smoothie:focus {
+	background-color: var(--color-dark-smoothie);
+	outline: none;
+}
+
+.link-button-hero-smoothie:active {
+	box-shadow: 1px 1px;
+	color: white;
+}
+
+.link-button-hero-coffee {
+	border-radius: .5rem;
+	background-color: var(--color-light-coffee);
+	border-radius: 0.5rem;
+	display: inline-block;
+	padding: 0 2rem;
+	color: white;
+	margin-left: 1rem;
+}
+
+.link-button-hero-coffee:hover {
+	background-color: var(--color-coffee);
+	color: white;
+	text-decoration: none;
+}
+
+.link-button-hero-coffee:focus {
+	background-color: var(--color-dark-coffee);
+	outline: none;
+}
+
+.link-button-hero-coffee:active {
+	box-shadow: 1px 1px;
+	color: white;
+}
+
+.link-button-normal {
+	border: 2px solid;
+	border-radius: .5rem;
+	padding: 0 2rem;
+	display: inline-block;
+	color: var(--color-dark-smoothie);
+	margin: 0 1rem;
+}
+
+.link-button-normal:hover {
+	box-shadow: 1px 1px;
+	color: var(--color-dark-smoothie);
+	text-decoration: none;
+}
+
+.link-button-normal:focus {
+	color: var(--color-dark-smoothie);
+	outline: none;
+}
+
+.link-button-normal:active {
+	box-shadow: 2px 2px;
+	color: var(--color-dark-smoothie);
+}
+
+.link-button-tertiary {
+	border: 2px solid;
+	border-radius: .5rem;
+	padding: 0 2rem;
+	display: inline-block;
+	color: var(--color-dark-smoke)
+}
+
+.link-button-tertiary:hover {
+	box-shadow: 1px 1px;
+	color: var(--color-dark-smoke);
+	text-decoration: none;
+}
+
+.link-button-tertiary:focus {
+	color: var(--color-dark-smoke);
+	outline: none;
+}
+
+.link-button-tertiary:active {
+	box-shadow: 2px 2px;
+	color: var(--color-dark-smoke);
+}
+
+/* ==========================================================================
+Accordion
+========================================================================== */
+
+summary {
+	border-bottom: 2px solid;
+	padding: 0.5rem 0;
+}
+
+summary:focus, details[open] summary {
+	background-color: var(--color-mint);
+	outline: none;
+}
+
+/* ==========================================================================
+Examples
+========================================================================== */
+
+figure {
+	margin: 0;
+	border: dashed 10px var(--color-dark-mint);
+	border-radius: 20px;
+	padding: 2rem;
+}
+
+.example-color-palette {
+	text-align: center;
+}
+
+.example-button-links {
+	text-align: center;
+}
+
+.example-raleway-font {
+	font-family: var(--font-secondary);
+}
+
+.example-roboto-font {
+	font-family: var(--font-primary);
+}
+
+/* ==========================================================================
+Modal Dialog Box
+========================================================================== */
+
+dialog {
+	border: none;
+	border-radius: 1rem;
+	box-shadow: 7px 7px 7px rgba( 0, 0, 0, .5 );
+	padding: 2rem;
+	background-color: var(--color-light-mint);
+}
+
+dialog[open] {
+	animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+	
+	0% {
+		opacity: 0;
+		transform: scale(.1);
+	}
+	
+	60% {
+		transform: scale(1.25);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	
 }

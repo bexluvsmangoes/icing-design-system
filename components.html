@@ -14,7 +14,7 @@
 
 <body>
 	<header>
-		<a class="logo" href="">Icing Design System</a>
+		<a class="logo" href="index.html">Icing Design System</a>
 		<nav>
 			<ul>
 				<li><a href="index.html">Home</a></li>
@@ -27,9 +27,62 @@
 
 	<main>
 		<h1>Icing Design System Components</h1>
+		<section>
+			<h2>Link Buttons</h2>
+			<figure class="example-button-links">
+				<a href="" class=link-button-hero-smoothie>Hero</a>
+				<a href="" class=link-button-hero-coffee>Hero</a>
+				<a href="" class=link-button-normal>Normal</a>
+				<a href="" class=link-button-tertiary>Tertiary</a>
+			</figure>
+		</section>
+		
+		<section>
+			<h2>Accordions</h2>
+			<figure>
+				<details>
+					<summary>Ice Cream</summary>
+					<div>
+						<p>Mint Chocolate</p>
+						<p>Strawberry</p>
+						<p>Chocolate</p>
+						<p>Vanilla</p>
+					</div>
+				</details>
+				<details>
+					<summary>Pie</summary>
+					<div>
+						<p>Blueberry</p>
+						<p>Apple</p>
+						<p>Rhubarb</p>
+					</div>
+				</details>
+				<details>
+					<summary>Cupcakes</summary>
+					<div>
+						<p>Lemon Lavender</p>
+						<p>Pumpkin Spice</p>
+						<p>Wedding Cake</p>
+					</div>
+				</details>
+			</figure>
+		</section>
+
+		<button id="modal-demo" type="button">Open Modal</button>
+
+		<dialog>
+	
+	<h2>Example Modal</h2>
+	
+	<p>This is an example of a modal description.</p>
+	
+</dialog>
+
+
 	</main>
 
 	<footer>
+
 		<p>Designed by Rebekah Chang</p>
 		<p>ACC User Experience Student</p>
 		<nav>
@@ -44,5 +97,26 @@
 	</footer>
 
 </body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+const modal = document.querySelector('dialog');
+const open = document.getElementById('modal-demo');
+
+open.addEventListener('click', () => {
+modal.showModal();
+});
+
+modal.addEventListener('click', event => {
+if (event.target === modal) {
+modal.close('cancelled');
+}
+});
+
+});
+</script>
+
+
 
 </html>
