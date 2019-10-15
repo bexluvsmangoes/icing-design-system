@@ -82,7 +82,7 @@ a {
 
 a:hover {
 	color: var(--color-dark-coffee);
-	text-decoration: underline;
+	text-decoration: none;
 }
 /* ==========================================================================
 Body
@@ -120,6 +120,11 @@ header ul {
 	text-decoration: underline;
 }
 
+header a:hover {
+	color: white;
+	text-decoration: none;
+}
+
 /* ==========================================================================
 footer
 ========================================================================== */
@@ -137,7 +142,6 @@ buttons
 .link-button-hero-smoothie {
 	border-radius: .5rem;
 	background-color: var(--color-light-smoothie);
-	border-radius: 0.5rem;
 	display: inline-block;
 	padding: 0 2rem;
 }
@@ -161,7 +165,6 @@ buttons
 .link-button-hero-coffee {
 	border-radius: .5rem;
 	background-color: var(--color-light-coffee);
-	border-radius: 0.5rem;
 	display: inline-block;
 	padding: 0 2rem;
 	color: white;
@@ -306,4 +309,63 @@ dialog[open] {
 		transform: scale(1);
 	}
 	
+}
+/* ==========================================================================
+forms
+========================================================================== */
+input, select, textarea {
+	border: 2px solid var(--color-light-smoothie);
+	border-radius: .5rem;
+	box-sizing: border-box;
+	display: block;
+	margin-top: .5rem;
+	min-width: 50%;
+	padding: .5rem;
+	-webkit-appearance:none;
+	margin-bottom: 1rem;
+
+}
+
+input:focus, select:focus, textarea:focus {
+	box-shadow: 2px 2px 0 #999;
+	outline: none;
+}
+
+input[disabled], select[disabled], textarea[disabled] {
+	opacity: 0.5;
+}
+
+.error {
+	background-color: var(--color-smoothie);
+	border: 2px solid var(--color-dark-smoothie);
+	color: white;
+}
+
+.error-message {
+	color: var(--color-dark-smoothie);
+	margin: 0;
+}
+
+button {
+	border-radius: .5rem;
+	background-color: var(--color-light-smoothie);
+	display: inline-block;
+	padding: .5rem 2rem;
+	color: var(--color-dark-smoothie);
+}
+
+button:hover {
+	background-color: var(--color-smoothie);
+	color: white;
+	text-decoration: none;
+}
+
+button:focus {
+	background-color: var(--color-dark-smoothie);
+	outline: none;
+}
+
+button:active {
+	box-shadow: 1px 1px;
+	color: white;
 }

@@ -30,10 +30,10 @@
 		<section>
 			<h2>Link Buttons</h2>
 			<figure class="example-button-links">
-				<a href="" class=link-button-hero-smoothie>Hero</a>
-				<a href="" class=link-button-hero-coffee>Hero</a>
-				<a href="" class=link-button-normal>Normal</a>
-				<a href="" class=link-button-tertiary>Tertiary</a>
+				<a href="" class="link-button-hero-smoothie">Hero</a>
+				<a href="" class="link-button-hero-coffee">Hero</a>
+				<a href="" class="link-button-normal">Normal</a>
+				<a href="" class="link-button-tertiary">Tertiary</a>
 			</figure>
 		</section>
 		
@@ -68,16 +68,78 @@
 			</figure>
 		</section>
 
-		<button id="modal-demo" type="button">Open Modal</button>
+		<section>
+			<h2>Form Inputs</h2>
 
-		<dialog>
-	
-	<h2>Example Modal</h2>
-	
-	<p>This is an example of a modal description.</p>
-	
-</dialog>
+			<figure class="example-form">
+			
+				<form action="">
 
+					<h3>Text Input</h3>
+					<label for="text-input">Text Input</label>
+					<small class="form-microcopy">microcopy example</small>
+					<input type="text" id="text-input" name="text-input" placeholder="Text input here">
+
+					<label for="disabled-input">Text Input: Disabled</label>
+					<input type="text" id="disabled-input" name="disabled-input" required class="disabled" placeholder="Disabled input here" disabled>
+
+					<label for="error">Text Input: Error</label>
+					<input type="text" id="error" name="error" required class="error" placeholder="Error input here">
+					<p class="error-message">error message</p>
+
+					<h3>Select</h3>
+					<label for="dessert">Select label</label>
+					<select id="dessert" name="dessert">
+						<option value="" selected disabled hidden>Choose</option>
+						<option>Cake</option>
+						<option>Cupcake</option>
+						<option>Pie</option>
+					</select>
+
+					<label for="dessert">Select label: Disabled</label>
+					<select id="dessert" name="dessert" required class="disabled" disabled>
+						<option value="" selected disabled hidden>Choose</option>
+						<option>Cake</option>
+						<option>Cupcake</option>
+						<option>Pie</option>
+					</select>
+
+					<label for="dessert">Select label: Error</label>
+					<select id="dessert" name="dessert" required class="error">
+						<option value="" selected disabled hidden>Choose</option>
+						<option>Cake</option>
+						<option>Cupcake</option>
+						<option>Pie</option>
+					</select>
+					<p class="error-message">error message</p>
+
+					<h3>Text Area</h3>
+					<label for="message">Text Area</label>
+					<textarea id="message" name="message" placeholder="Text area placeholder"></textarea>
+
+					<label for="message">Text Area: Disabled</label>
+					<textarea id="message" name="message" required class="disabled" disabled placeholder="Text area placeholder"></textarea>
+
+					<label for="message">Text Area: Error</label>
+					<textarea id="message" name="message" required class="error" placeholder="Text area placeholder"></textarea>
+					<p class="error-message">error message</p>
+					
+					<h3>Submit / Button</h3>					
+					<button id="sumbit-button" type="submit">Submit</button>
+				</form>			
+			</figure>
+		</section>
+
+		<section>
+			<h2>Modal</h2>
+			<figure>
+				<button id="modal-demo" type="button">Open Modal</button>
+				<dialog>				
+					<h2>Example Modal</h2>				
+					<p>This is an example of a modal description.</p>				
+				</dialog>
+			</figure>
+		</section>
 
 	</main>
 
@@ -95,8 +157,6 @@
 
 		<p>Copyright 2019</p>
 	</footer>
-
-</body>
 
 <script>
 document.addEventListener('DOMContentLoaded', function(){
@@ -117,6 +177,6 @@ modal.close('cancelled');
 });
 </script>
 
-
+</body>
 
 </html>
