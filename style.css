@@ -35,13 +35,15 @@ html {
 	font-family: var(--font-primary);
 	line-height: 2;
 
-	--size-ratio: 1.21;
+	--size-ratio: 1.19;
 	--size-six-up: calc( var(--size-five-up) * var(--size-ratio) );
 	--size-five-up: calc( var(--size-four-up) * var(--size-ratio) );
 	--size-four-up: calc( var(--size-three-up) * var(--size-ratio) );
 	--size-three-up: calc( var(--size-two-up) * var(--size-ratio) );
 	--size-two-up: calc( var(--size-one-up) * var(--size-ratio) );
 	--size-one-up: calc( 1rem * var(--size-ratio) );
+
+	font-size: 14px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -84,6 +86,27 @@ a:hover {
 	color: var(--color-dark-coffee);
 	text-decoration: none;
 }
+
+@media ( min-width: 700px ) {
+	
+	html {
+		font-size: 16px;
+		--size-ratio: 1.21;
+	}
+	
+}
+
+@media ( min-width: 1200px ) {
+	
+	html {
+		font-size: 19px;
+		--size-ratio: 1.23;
+	}
+	
+}
+
+
+
 /* ==========================================================================
 Body
 ========================================================================== */
@@ -103,26 +126,63 @@ main {
 Header
 ========================================================================== */
 
-header {
-	background-color: var(--color-light-smoothie);
-	padding: 2rem;
+.logo {
+	font-family: var(--font-secondary);
+	font-size: 2rem;
 }
 
-header ul {
+nav a:hover, .logo:hover {
+	color: white;
+	text-decoration: none;
+}
+
+/* ==========================================================================
+Navigation
+========================================================================== */
+
+nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.logo {
-	font-family: var(--font-secondary);
-	font-size: 2rem;
-	text-decoration: underline;
+.nav-primary {
+	background-color: var(--color-light-smoothie);
+	padding: 2rem;
 }
 
-header a:hover {
-	color: white;
-	text-decoration: none;
+.nav-primary nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-primary li {
+	border-top: 1px solid var(--color-dark-smoothie);
+	padding: .5rem 0;
+}
+
+.nav-primary nav a {
+	padding: 1rem 0;
+}
+
+.current-page {
+	font-weight: bold;
+	letter-spacing: .3rem;
+}
+
+@media ( min-width: 625px ) {
+	
+	.nav-primary li {
+		display: inline;
+		border: none;
+		padding-right: 2rem;
+	}
+	
+	.nav-primary a {
+		display: inline-block;
+	}
+	
 }
 
 /* ==========================================================================
@@ -235,6 +295,7 @@ buttons
 	box-shadow: 2px 2px;
 	color: var(--color-dark-smoke);
 }
+
 
 /* ==========================================================================
 Accordion
