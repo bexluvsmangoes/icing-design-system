@@ -140,6 +140,10 @@ nav a:hover, .logo:hover {
 Navigation
 ========================================================================== */
 
+.nav-secondary li li {
+	padding-left: 2rem;
+}
+
 nav ul {
 	list-style: none;
 	margin: 0;
@@ -341,6 +345,7 @@ figure {
 /* ==========================================================================
 forms
 ========================================================================== */
+
 input, select, textarea {
 	border: 2px solid var(--color-light-smoothie);
 	border-radius: .5rem;
@@ -397,6 +402,7 @@ button:active {
 	box-shadow: 1px 1px;
 	color: white;
 }
+
 /* ==========================================================================
 Modal Dialog Box
 ========================================================================== */
@@ -429,4 +435,91 @@ dialog[open] {
 		transform: scale(1);
 	}
 	
+}
+
+/* ==========================================================================
+Notifications
+========================================================================== */
+
+.notifications img {
+	width: 40px;
+	height: 40px;
+	padding: 1rem;
+
+}
+
+.notifications section {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+}
+
+.notifications p {
+	padding: 1rem 0 0 2rem;
+	margin: 0;
+}
+
+.notification-warning img {
+	background-color: var(--color-coffee);
+}
+
+.notification-neutral img {
+	background-color: var(--color-light-coffee);
+}
+
+.notification-success img {
+	background-color: var(--color-dark-mint);
+}
+
+.notification-error img {
+	background-color: var(--color-dark-smoothie);
+}
+
+.notification-error {
+	border: 5px solid var(--color-dark-smoothie);
+}
+
+.notification-warning {
+	border: 5px solid var(--color-coffee);
+}
+
+.notification-neutral {
+	border: 5px solid var(--color-light-coffee);
+}
+
+.notification-success {
+	border: 5px solid var(--color-dark-mint);
+}
+
+/* ==========================================================================
+Hero
+========================================================================== */
+
+.hero {
+	background-color: var(--color-smoothie);
+	padding: 10vh;
+}
+
+.hero h1 {
+	margin: 0;
+}
+
+.hero img {
+	display: block;
+	align-content: center;
+	margin: auto;
+	width: 100%;
+}
+
+@media ( min-width: 620px ) {
+	.hero {
+		display: flex;
+	}
+	.hero img {
+		width: 50%;
+	}
+}
+
+.hero-section img {
+	width: 100%;
 }
